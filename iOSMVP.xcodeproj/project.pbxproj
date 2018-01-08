@@ -14,6 +14,12 @@
 		633F51461FFFACE900A372AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633F51441FFFACE900A372AB /* LaunchScreen.storyboard */; };
 		633F51511FFFACE900A372AB /* iOSMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F51501FFFACE900A372AB /* iOSMVPTests.swift */; };
 		633F515C1FFFACE900A372AB /* iOSMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F515B1FFFACE900A372AB /* iOSMVPUITests.swift */; };
+		633F516A1FFFADF000A372AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F51691FFFADF000A372AB /* LoginViewController.swift */; };
+		633F516C1FFFAE0D00A372AB /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F516B1FFFAE0D00A372AB /* BasePresenter.swift */; };
+		633F516F1FFFAE2F00A372AB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F516E1FFFAE2F00A372AB /* BaseView.swift */; };
+		63DAB4C6200338AF00EEA126 /* LoadDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAB4C5200338AF00EEA126 /* LoadDataView.swift */; };
+		63DAB4CA20033ADE00EEA126 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAB4C920033ADE00EEA126 /* LoginView.swift */; };
+		63DAB4CC20033ED700EEA126 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAB4CB20033ED700EEA126 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		633F51571FFFACE900A372AB /* iOSMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		633F515B1FFFACE900A372AB /* iOSMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSMVPUITests.swift; sourceTree = "<group>"; };
 		633F515D1FFFACE900A372AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633F51691FFFADF000A372AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		633F516B1FFFAE0D00A372AB /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		633F516E1FFFAE2F00A372AB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		63DAB4C5200338AF00EEA126 /* LoadDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataView.swift; sourceTree = "<group>"; };
+		63DAB4C920033ADE00EEA126 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		63DAB4CB20033ED700EEA126 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,10 @@
 		633F513A1FFFACE900A372AB /* iOSMVP */ = {
 			isa = PBXGroup;
 			children = (
+				63DAB4CD20033FC900EEA126 /* controller */,
+				63DAB4C820033A4100EEA126 /* presenter */,
+				63DAB4C720033A3900EEA126 /* view */,
+				633F516D1FFFAE1400A372AB /* base */,
 				633F513B1FFFACE900A372AB /* AppDelegate.swift */,
 				633F513D1FFFACE900A372AB /* ViewController.swift */,
 				633F513F1FFFACE900A372AB /* Main.storyboard */,
@@ -123,6 +139,40 @@
 				633F515D1FFFACE900A372AB /* Info.plist */,
 			);
 			path = iOSMVPUITests;
+			sourceTree = "<group>";
+		};
+		633F516D1FFFAE1400A372AB /* base */ = {
+			isa = PBXGroup;
+			children = (
+				633F516B1FFFAE0D00A372AB /* BasePresenter.swift */,
+				633F516E1FFFAE2F00A372AB /* BaseView.swift */,
+				63DAB4C5200338AF00EEA126 /* LoadDataView.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		63DAB4C720033A3900EEA126 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				63DAB4C920033ADE00EEA126 /* LoginView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		63DAB4C820033A4100EEA126 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				63DAB4CB20033ED700EEA126 /* LoginPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		63DAB4CD20033FC900EEA126 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				633F51691FFFADF000A372AB /* LoginViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DAB4CC20033ED700EEA126 /* LoginPresenter.swift in Sources */,
+				633F516A1FFFADF000A372AB /* LoginViewController.swift in Sources */,
+				63DAB4CA20033ADE00EEA126 /* LoginView.swift in Sources */,
+				633F516C1FFFAE0D00A372AB /* BasePresenter.swift in Sources */,
+				633F516F1FFFAE2F00A372AB /* BaseView.swift in Sources */,
 				633F513E1FFFACE900A372AB /* ViewController.swift in Sources */,
+				63DAB4C6200338AF00EEA126 /* LoadDataView.swift in Sources */,
 				633F513C1FFFACE900A372AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
