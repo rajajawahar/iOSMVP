@@ -8,15 +8,42 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
-    }
+class LoginViewController: UIViewController,LoginView {
+  
+  var loginPresenter : LoginPresenter?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    loginPresenter = LoginPresenter()
+    loginPresenter?.attachView(view: self)
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+  
+  func showError(message: String) {
+    // Show Error if there is any problem with validation
+  }
+  
+  func showLoading() {
+    //Show the progress bar while signingin
+  }
+  
+  func hideLoading() {
+    //hide the progress bar after validation
+  }
+  
+  func showRetry() {
+    
+  }
+  
+  func hideRetry() {
+    
+  }
+  
+  func navigateToHome() {
+    // Navigate to Home
+  }
   
 }
