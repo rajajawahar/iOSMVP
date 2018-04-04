@@ -10,20 +10,26 @@ import XCTest
 @testable import iOSMVP
 
 class iOSMVPTests: XCTestCase {
-  
-  var loginPresenter : LoginPresenter?
-  
-  override func setUp() {
-    super.setUp()
-    loginPresenter = LoginPresenter()
-  }
-  
-  override func tearDown() {
-    super.tearDown()
-  }
-  
-  func testExample() {
-    XCTAssertFalse((loginPresenter?.emailValid(emailAddress: "raja.com"))!)
-  }
-  
+    
+    var loginPresenter : LoginPresenter?
+    
+    override func setUp() {
+        super.setUp()
+        loginPresenter = LoginPresenter()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    func testExample() {
+        XCTAssertFalse((loginPresenter?.emailValid(emailAddress: "raja"))!)
+    }
+    
+    func testEmpty(){
+        XCTAssertTrue((loginPresenter?.isNotEmpty(input: "gaga"))!)
+    }
+    
+    
+    
 }
