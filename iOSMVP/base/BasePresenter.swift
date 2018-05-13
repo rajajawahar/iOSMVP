@@ -10,6 +10,8 @@ import UIKit
 
 protocol BasePresenter {
   
+// Protocol does not support generics, so we have added associated type,
+//    Anything that conforms to BasePresenter 
   associatedtype View
   
   func attachView(view : View)

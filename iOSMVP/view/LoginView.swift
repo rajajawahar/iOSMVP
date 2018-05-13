@@ -11,5 +11,6 @@ import UIKit
 protocol LoginView: LoadDataView {
   
   func navigateToHome()
+    
   
 }

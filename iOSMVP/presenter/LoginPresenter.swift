@@ -10,10 +10,12 @@ import UIKit
 
 class LoginPresenter: BasePresenter {
     
+    // Defined associcated type explicity by typealias
+    // Protocol Associated Types (PATs), it just means generic protocols.
     typealias View = LoginView
+    
     var loginView : LoginView?
-    
-    
+
     func attachView(view: LoginView) {
         self.loginView = view
     }
